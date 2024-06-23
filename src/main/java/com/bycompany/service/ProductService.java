@@ -16,9 +16,4 @@ public class ProductService {
         productRepository.remove(name);
     }
 
-    @Autowired
-    @Qualifier("productXML")
-    public void setProductRepository(ProductRepository productRepository) {//la interfaz
-        this.productRepository = productRepository;
-    }
 }
