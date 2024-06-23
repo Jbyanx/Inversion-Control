@@ -1,7 +1,5 @@
 package com.bycompany;
 
-import com.bycompany.repository.ProductRepositoryA;
-import com.bycompany.repository.ProductRepositoryB;
 import com.bycompany.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

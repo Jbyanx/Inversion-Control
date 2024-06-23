@@ -1,5 +1,8 @@
 package com.bycompany.repository;
 
+import org.springframework.stereotype.Repository;
+
+@Repository("productMySQL")
 public class ProductRepositoryA implements ProductRepository{
 
     public ProductRepositoryA() {

@@ -1,5 +1,9 @@
 package com.bycompany.repository;
 
+
+import org.springframework.stereotype.Repository;
+
+@Repository("productXML")
 public class ProductRepositoryB implements ProductRepository
 {
     public ProductRepositoryB() {
