@@ -11,11 +11,6 @@ import org.springframework.context.annotation.Bean;
 public class SpringIocApplication {
 	private ProductService productService;
 
-	@Autowired
-	public SpringIocApplication(ProductService productService) {
-		this.productService = productService;
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(SpringIocApplication.class, args);
 
@@ -27,5 +22,10 @@ public class SpringIocApplication {
 			productService.save("moto boxer");
 			productService.remove("moto honda navi");
 		};
+	}
+
+	@Autowired
+	public void setProductService(ProductService productService) {
+		this.productService = productService;
 	}
 }

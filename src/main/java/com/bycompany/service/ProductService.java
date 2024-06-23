@@ -9,15 +9,16 @@ import org.springframework.stereotype.Service;
 public class ProductService {
     private ProductRepository productRepository;
 
-    @Autowired
-    public ProductService(@Qualifier("productXML") ProductRepository productRepository) {
-        this.productRepository = productRepository;
-    }
-
     public void save(String name){
         productRepository.save(name);
     }
     public void remove(String name){
         productRepository.remove(name);
+    }
+
+    @Autowired
+    @Qualifier("productXML")
+    public void setProductRepository(ProductRepository productRepository) {//la interfaz
+        this.productRepository = productRepository;
     }
 }
