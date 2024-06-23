@@ -1,12 +1,7 @@
 package com.bycompany.repository;
 
-public class ProductRepository {
+public interface ProductRepository {
+    void save(String name);
 
-    public void save(String name){
-        System.out.println("Producto guardado exitosamente: "+name);
-    }
-
-    public void remove(String name){
-        System.out.println("Producto eliminado exitosamente: "+name);
-    }
+    void remove(String name);
 }
