@@ -9,8 +9,12 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class SpringIocApplication {
-	@Autowired
 	private ProductService productService;
+
+	@Autowired
+	public SpringIocApplication(ProductService productService) {
+		this.productService = productService;
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringIocApplication.class, args);

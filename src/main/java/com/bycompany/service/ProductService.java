@@ -7,9 +7,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ProductService {
-    @Autowired
-    @Qualifier("productXML")
     private ProductRepository productRepository;
+
+    @Autowired
+    public ProductService(@Qualifier("productXML") ProductRepository productRepository) {
+        this.productRepository = productRepository;
+    }
 
     public void save(String name){
         productRepository.save(name);
