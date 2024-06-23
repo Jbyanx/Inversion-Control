@@ -1,5 +1,6 @@
 package com.bycompany.config;
 
+import com.bycompany.repository.ProductRepository;
 import com.bycompany.repository.ProductRepositoryA;
 import com.bycompany.repository.ProductRepositoryB;
 import com.bycompany.service.ProductService;
@@ -27,4 +28,5 @@ public class beansInjector {
     public ProductService createProductService(){
         return new ProductService();
     }
+
 }
