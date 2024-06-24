@@ -10,10 +10,10 @@ import org.springframework.web.client.RestTemplate;
 public class HttpClientConfig {
 
 
-    @Bean
-    public RestTemplate restTemplate(@Qualifier("productMySQL") ProductRepository productRepository){
-        System.out.println("bean con restTemplate");
-        productRepository.save("camisa verde");
-        return new RestTemplate();
-    }
+//    @Bean
+//    public RestTemplate restTemplate(@Qualifier("productMySQL") ProductRepository productRepository){
+//        System.out.println("bean con restTemplate");
+//        productRepository.save("camisa verde");
+//        return new RestTemplate();
+//    }
 }
