@@ -7,4 +7,8 @@ import org.springframework.stereotype.Component;
 public class ComponentB {
     @Autowired
     private ComponentC componentC;
+
+    public String getClassName(){
+        return "yo soy el bean "+this.getClass().getSimpleName();
+    }
 }

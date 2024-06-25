@@ -3,6 +3,7 @@ package com.bycompany;
 import com.bycompany.service.ProductService;
 import com.bycompany.service.ShoppingCarService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,6 +16,9 @@ import java.util.List;
 @SpringBootApplication
 @RestController
 public class SpringIocApplication {
+	@Value("${jabes.borre}")
+	private String jabes;
+
 	@Autowired
 	private ProductService productService;
 	@Autowired
@@ -28,7 +32,7 @@ public class SpringIocApplication {
 	@RequestMapping("/example")
 	public String example(){
 		productService.save("honda xre");
-		return "Hello Springboot IOC";
+		return "Hello Springboot IOC, hola "+jabes;
 	}
 
 	@RequestMapping("/add-product")
